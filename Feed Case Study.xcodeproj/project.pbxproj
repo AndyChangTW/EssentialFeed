@@ -80,8 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				A102818D28E478E700E79279 /* Feed_Case_Study.h */,
-				A10281A628E47B3E00E79279 /* Feature */,
-				A10281AB28E499A600E79279 /* API */,
+				A10281A628E47B3E00E79279 /* Feed Feature */,
+				A10281AB28E499A600E79279 /* Feed API */,
 			);
 			path = "Feed Case Study";
 			sourceTree = "<group>";
@@ -89,28 +89,36 @@
 		A102819628E478E700E79279 /* Feed Case StudyTests */ = {
 			isa = PBXGroup;
 			children = (
-				A10281A728E48EC100E79279 /* RemoteFeedLoaderTests.swift */,
+				A15E926928EB264B00FC9C48 /* Feed API */,
 			);
 			path = "Feed Case StudyTests";
 			sourceTree = "<group>";
 		};
-		A10281A628E47B3E00E79279 /* Feature */ = {
+		A10281A628E47B3E00E79279 /* Feed Feature */ = {
 			isa = PBXGroup;
 			children = (
 				A10281A228E479FC00E79279 /* FeedItem.swift */,
 				A10281A428E47A7F00E79279 /* FeedLoader.swift */,
 			);
-			path = Feature;
+			path = "Feed Feature";
 			sourceTree = "<group>";
 		};
-		A10281AB28E499A600E79279 /* API */ = {
+		A10281AB28E499A600E79279 /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
 				A10281A928E499A300E79279 /* RemoteFeedLoader.swift */,
 				A15E926528EB21BB00FC9C48 /* HTTPClient.swift */,
 				A15E926728EB21E000FC9C48 /* FeedItemMapper.swift */,
 			);
-			path = API;
+			path = "Feed API";
+			sourceTree = "<group>";
+		};
+		A15E926928EB264B00FC9C48 /* Feed API */ = {
+			isa = PBXGroup;
+			children = (
+				A10281A728E48EC100E79279 /* RemoteFeedLoaderTests.swift */,
+			);
+			path = "Feed API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
