@@ -28,17 +28,20 @@ class LocalFeedLoader {
 
 class FeedStore {
     typealias DeletionCompletion = (Error?) -> Void
-    var deleteCachedFeedCallCount: Int = 0
     var deleteCompletions = [DeletionCompletion]()
-    var insertions = [(items: [FeedItem], timestamp: Date)]()
+    var receivedMessages = [MessageReceived]()
+    enum MessageReceived: Equatable {
+        case delete
+        case insert(items: [FeedItem], timestamp: Date)
+    }
     
     func deleteCachedFeed(completion: @escaping DeletionCompletion) {
-        deleteCachedFeedCallCount += 1
         deleteCompletions.append(completion)
+        receivedMessages.append(.delete)
     }
     
     func insert(_ items: [FeedItem], timestamp: Date) {
-        insertions.append((items, timestamp))
+        receivedMessages.append(.insert(items: items, timestamp: timestamp))
     }
     
     func completeDeletion(with error: Error, at index: Int = 0) {
@@ -55,7 +58,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
     func test_init_doesNotDeleteCacheUponCreation() {
         let (_, store) = makeSUT()
         
-        XCTAssertEqual(store.deleteCachedFeedCallCount, 0)
+        XCTAssertEqual(store.receivedMessages.count, 0)
     }
     
     func test_save_requestsCacheDeletion() {
@@ -64,7 +67,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
         
         sut.save(items)
         
-        XCTAssertEqual(store.deleteCachedFeedCallCount, 1)
+        XCTAssertEqual(store.receivedMessages, [.delete])
     }
     
     func test_save_doesNotRequestsInsertionOnDeletionError() {
@@ -75,7 +78,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
         sut.save(items)
         store.completeDeletion(with: error)
         
-        XCTAssertEqual(store.insertions.count, 0)
+        XCTAssertEqual(store.receivedMessages, [.delete])
     }
     
     func test_save_requestsNewCacheInsertionWithTimestampOnSuccessfulDeletion() {
@@ -86,9 +89,7 @@ final class CacheFeedUseCaseTests: XCTestCase {
         sut.save(items)
         store.completeDeletionSuccessfully()
         
-        XCTAssertEqual(store.insertions.count, 1)
-        XCTAssertEqual(store.insertions.first?.items, items)
-        XCTAssertEqual(store.insertions.first?.timestamp, timestamp)
+        XCTAssertEqual(store.receivedMessages, [.delete, .insert(items: items, timestamp: timestamp)])
     }
     
     private func makeSUT(currentDate: @escaping () -> Date = Date.init, file: StaticString = #filePath, line: UInt = #line) -> (sut: LocalFeedLoader, store: FeedStore) {
