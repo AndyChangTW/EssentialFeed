@@ -131,17 +131,17 @@ final class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         return try! JSONSerialization.data(withJSONObject: itemsJSON)
     }
     
-    private func makeItem(id: UUID, description: String?, location: String?, imageURL: URL) -> (model: FeedItem, json: [String: Any]) {
-        let model = FeedItem(
+    private func makeItem(id: UUID, description: String?, location: String?, imageURL: URL) -> (model: FeedImage, json: [String: Any]) {
+        let model = FeedImage(
             id: id,
             description: description,
             location: location,
-            imageURL: imageURL)
+            url: imageURL)
         let json = [
             "id": model.id.uuidString,
             "description": model.description,
             "location": model.location,
-            "image": model.imageURL.absoluteString
+            "image": model.url.absoluteString
         ].reduce(into: [String: Any]()) { partialResult, element in
             if let value = element.value {
                 partialResult[element.key] = value
