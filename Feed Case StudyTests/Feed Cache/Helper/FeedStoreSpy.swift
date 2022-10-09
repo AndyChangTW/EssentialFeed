@@ -10,7 +10,7 @@ import FeedCaseStudy
 
 class FeedStoreSpy: FeedStore {
     enum MessageReceived: Equatable {
-        case delete
+        case deleteCachedFeed
         case insert(feed: [LocalFeedImage], timestamp: Date)
         case retrieve
     }
@@ -24,7 +24,7 @@ class FeedStoreSpy: FeedStore {
     
     func deleteCachedFeed(completion: @escaping DeletionCompletion) {
         deleteCompletions.append(completion)
-        receivedMessages.append(.delete)
+        receivedMessages.append(.deleteCachedFeed)
     }
     
     func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
