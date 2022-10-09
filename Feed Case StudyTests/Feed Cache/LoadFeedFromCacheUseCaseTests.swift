@@ -190,7 +190,7 @@ final class LoadFeedFromCacheUseCaseTests: XCTestCase {
     }
 }
 
-extension Date {
+private extension Date {
     func adding(days: Int) -> Date {
         let calendar = Calendar(identifier: .gregorian)
         return calendar.date(byAdding: .day, value: days, to: self)!
