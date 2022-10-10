@@ -131,6 +131,22 @@ final class CodableFeedStoreTests: XCTestCase {
         expect(sut, toRetrieveTwice: .failure(error))
     }
     
+    func test_insert_overridesPreviouslyInsertedCacheValues() {
+        let sut = makeSUT()
+        let firstInsertFeed = uniqueImageFeed().locals
+        let firstInsertTimestamp = Date()
+        
+        let firstInsertionError = insert((firstInsertFeed, firstInsertTimestamp), to: sut)
+        XCTAssertNil(firstInsertionError, "Expected to insert cache successfully")
+        
+        let secondInsertFeed = uniqueImageFeed().locals
+        let secondInsertTimestamp = Date()
+        let secondInsertionError = insert((secondInsertFeed, secondInsertTimestamp), to: sut)
+        XCTAssertNil(secondInsertionError, "Expected to insert cache successfully")
+        
+        expect(sut, toRetrieve: .found(feed: secondInsertFeed, timestamp: secondInsertTimestamp))
+    }
+    
     //MARK - Helper
     private func makeSUT(storeURL: URL? = nil, file: StaticString = #filePath, line: UInt = #line) -> CodableFeedStore {
         let sut = CodableFeedStore(storeURL: storeURL ??  testSpecificStoreURL())
@@ -177,13 +193,16 @@ final class CodableFeedStoreTests: XCTestCase {
         expect(sut, toRetrieve: expectedResult, file: file, line: line)
     }
     
-    private func insert(_ cache: (feed: [LocalFeedImage], timestamp: Date), to sut: CodableFeedStore, file: StaticString = #filePath, line: UInt = #line) {
+    @discardableResult
+    private func insert(_ cache: (feed: [LocalFeedImage], timestamp: Date), to sut: CodableFeedStore, file: StaticString = #filePath, line: UInt = #line) -> Error? {
         let exp = expectation(description: "Wait for cache retrieval")
+        var insertionError: Error?
         sut.insert(cache.feed, timestamp: cache.timestamp) { error in
-            XCTAssertNil(error, "Expected feed to be inserted successfully", file: file, line: line)
+            insertionError = error
             exp.fulfill()
         }
         wait(for: [exp], timeout: 1.0)
+        return insertionError
     }
     
 }
