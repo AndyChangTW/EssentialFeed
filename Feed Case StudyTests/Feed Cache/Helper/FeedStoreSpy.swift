@@ -33,15 +33,15 @@ class FeedStoreSpy: FeedStore {
     }
     
     func completeDeletion(with error: Error, at index: Int = 0) {
-        deleteCompletions[index](error)
+        deleteCompletions[index](.failure(error))
     }
     
     func completeDeletionSuccessfully(at index: Int = 0) {
-        deleteCompletions[index](nil)
+        deleteCompletions[index](.success(()))
     }
     
     func completeInsertion(with error: Error, at index: Int = 0) {
-        insertCompletions[index](error)
+        insertCompletions[index](.failure(error))
     }
     
     func retrieve(completion: @escaping RetrieveCompletion) {
