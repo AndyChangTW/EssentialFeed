@@ -22,8 +22,6 @@
 		A125891928F2B754004F2B6B /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125891828F2B754004F2B6B /* FeedCacheTestHelpers.swift */; };
 		A125891B28F2B86E004F2B6B /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125891A28F2B86E004F2B6B /* SharedTestHelpers.swift */; };
 		A125891E28F33009004F2B6B /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125891C28F32FAA004F2B6B /* FeedCachePolicy.swift */; };
-		A125892028F3CA57004F2B6B /* CodableFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125891F28F3CA57004F2B6B /* CodableFeedStoreTests.swift */; };
-		A125892228F4771B004F2B6B /* CodableFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125892128F4771B004F2B6B /* CodableFeedStore.swift */; };
 		A15E926628EB21BB00FC9C48 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15E926528EB21BB00FC9C48 /* HTTPClient.swift */; };
 		A15E926828EB21E000FC9C48 /* FeedItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15E926728EB21E000FC9C48 /* FeedItemMapper.swift */; };
 		A17A35F928F0570700E3483A /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A35F828F0570700E3483A /* LocalFeedLoader.swift */; };
@@ -104,8 +102,6 @@
 		A125891828F2B754004F2B6B /* FeedCacheTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCacheTestHelpers.swift; sourceTree = "<group>"; };
 		A125891A28F2B86E004F2B6B /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		A125891C28F32FAA004F2B6B /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
-		A125891F28F3CA57004F2B6B /* CodableFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStoreTests.swift; sourceTree = "<group>"; };
-		A125892128F4771B004F2B6B /* CodableFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStore.swift; sourceTree = "<group>"; };
 		A15E926528EB21BB00FC9C48 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		A15E926728EB21E000FC9C48 /* FeedItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemMapper.swift; sourceTree = "<group>"; };
 		A17A35F828F0570700E3483A /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
@@ -305,7 +301,6 @@
 				A19FE8A228EFF71B00CE1C63 /* CacheFeedUseCaseTests.swift */,
 				A125891128F1CB8F004F2B6B /* LoadFeedFromCacheUseCaseTests.swift */,
 				A125891628F2B28C004F2B6B /* ValidateFeedCacheUseCaseTests.swift */,
-				A125891F28F3CA57004F2B6B /* CodableFeedStoreTests.swift */,
 				A1B63CED28F6A60800DCE3E5 /* CoreDataFeedStoreTests.swift */,
 			);
 			path = "Feed Cache";
@@ -335,7 +330,6 @@
 		A1B7815A28F721620060195B /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				A1B7815C28F721B20060195B /* Codable */,
 				A1B7815B28F7216F0060195B /* CoreData */,
 			);
 			path = Infrastructure;
@@ -351,14 +345,6 @@
 				A1B7816128F7226F0060195B /* ManagedFeedImage.swift */,
 			);
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		A1B7815C28F721B20060195B /* Codable */ = {
-			isa = PBXGroup;
-			children = (
-				A125892128F4771B004F2B6B /* CodableFeedStore.swift */,
-			);
-			path = Codable;
 			sourceTree = "<group>";
 		};
 		A1C7447328EDECB800BC4B61 /* EssentialFeedAPIEndToEndTests */ = {
@@ -621,7 +607,6 @@
 				A17A35FF28F07A3000E3483A /* LocalFeedImage.swift in Sources */,
 				A17A35FB28F0578400E3483A /* FeedStore.swift in Sources */,
 				A17A35F928F0570700E3483A /* LocalFeedLoader.swift in Sources */,
-				A125892228F4771B004F2B6B /* CodableFeedStore.swift in Sources */,
 				A15E926628EB21BB00FC9C48 /* HTTPClient.swift in Sources */,
 				A10281A328E479FC00E79279 /* FeedImage.swift in Sources */,
 				A1C7446D28EDE55500BC4B61 /* URLSessionHTTPClient.swift in Sources */,
@@ -635,7 +620,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A125892028F3CA57004F2B6B /* CodableFeedStoreTests.swift in Sources */,
 				A125891928F2B754004F2B6B /* FeedCacheTestHelpers.swift in Sources */,
 				A125891728F2B28C004F2B6B /* ValidateFeedCacheUseCaseTests.swift in Sources */,
 				A10281A828E48EC100E79279 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
@@ -849,6 +833,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -859,10 +844,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.idv.acstudio.Feed-Case-Study";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -881,6 +869,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -891,9 +880,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.idv.acstudio.Feed-Case-Study";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -905,12 +897,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZAV73WDZNP;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.idv.acstudio.Feed-Case-StudyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -922,12 +918,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZAV73WDZNP;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.idv.acstudio.Feed-Case-StudyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1036,13 +1036,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZAV73WDZNP;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tw.idv.ACStudio.EssentialFeedAPIEndToEndTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1053,13 +1057,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZAV73WDZNP;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tw.idv.ACStudio.EssentialFeedAPIEndToEndTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1070,13 +1078,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZAV73WDZNP;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tw.idv.ACStudio.EssentialFeedCacheIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1087,13 +1099,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZAV73WDZNP;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tw.idv.ACStudio.EssentialFeedCacheIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
