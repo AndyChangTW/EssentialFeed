@@ -23,6 +23,8 @@
 		A125891928F2B754004F2B6B /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125891828F2B754004F2B6B /* FeedCacheTestHelpers.swift */; };
 		A125891B28F2B86E004F2B6B /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125891A28F2B86E004F2B6B /* SharedTestHelpers.swift */; };
 		A125891E28F33009004F2B6B /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125891C28F32FAA004F2B6B /* FeedCachePolicy.swift */; };
+		A15E6E3828FBC4B9007FE3A5 /* FeedCaseStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A102818A28E478E700E79279 /* FeedCaseStudy.framework */; platformFilter = ios; };
+		A15E6E3928FBC4B9007FE3A5 /* FeedCaseStudy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A102818A28E478E700E79279 /* FeedCaseStudy.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A15E926628EB21BB00FC9C48 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15E926528EB21BB00FC9C48 /* HTTPClient.swift */; };
 		A15E926828EB21E000FC9C48 /* FeedItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15E926728EB21E000FC9C48 /* FeedItemMapper.swift */; };
 		A17A35F928F0570700E3483A /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A35F828F0570700E3483A /* LocalFeedLoader.swift */; };
@@ -69,6 +71,13 @@
 			remoteGlobalIDString = A10B16E628FA970700B27785;
 			remoteInfo = FeedCaseStudyiOS;
 		};
+		A15E6E3A28FBC4B9007FE3A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A102818128E478E700E79279 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A102818928E478E700E79279;
+			remoteInfo = FeedCaseStudy;
+		};
 		A1C7447728EDECB800BC4B61 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A102818128E478E700E79279 /* Project object */;
@@ -84,6 +93,20 @@
 			remoteInfo = FeedCaseStudy;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A15E6E3C28FBC4B9007FE3A5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A15E6E3928FBC4B9007FE3A5 /* FeedCaseStudy.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A102818A28E478E700E79279 /* FeedCaseStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FeedCaseStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A15E6E3828FBC4B9007FE3A5 /* FeedCaseStudy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +214,7 @@
 				A10B16E828FA970800B27785 /* FeedCaseStudyiOS */,
 				A10B16F228FA970800B27785 /* FeedCaseStudyiOSTests */,
 				A102818B28E478E700E79279 /* Products */,
+				A15E6E3728FBC4B9007FE3A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -271,6 +296,13 @@
 				A125891828F2B754004F2B6B /* FeedCacheTestHelpers.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		A15E6E3728FBC4B9007FE3A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A15E926928EB264B00FC9C48 /* Feed API */ = {
@@ -430,10 +462,12 @@
 				A10B16E328FA970700B27785 /* Sources */,
 				A10B16E428FA970700B27785 /* Frameworks */,
 				A10B16E528FA970700B27785 /* Resources */,
+				A15E6E3C28FBC4B9007FE3A5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A15E6E3B28FBC4B9007FE3A5 /* PBXTargetDependency */,
 			);
 			name = FeedCaseStudyiOS;
 			productName = FeedCaseStudyiOS;
@@ -687,6 +721,12 @@
 			isa = PBXTargetDependency;
 			target = A10B16E628FA970700B27785 /* FeedCaseStudyiOS */;
 			targetProxy = A10B16F028FA970800B27785 /* PBXContainerItemProxy */;
+		};
+		A15E6E3B28FBC4B9007FE3A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = A102818928E478E700E79279 /* FeedCaseStudy */;
+			targetProxy = A15E6E3A28FBC4B9007FE3A5 /* PBXContainerItemProxy */;
 		};
 		A1C7447828EDECB800BC4B61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -957,6 +997,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -987,6 +1030,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
