@@ -16,6 +16,7 @@
 		A10B16EF28FA970800B27785 /* FeedCaseStudyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10B16E728FA970700B27785 /* FeedCaseStudyiOS.framework */; };
 		A10B16F428FA970800B27785 /* FeedCaseStudyiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B16F328FA970800B27785 /* FeedCaseStudyiOSTests.swift */; };
 		A10B16F528FA970800B27785 /* FeedCaseStudyiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = A10B16E928FA970800B27785 /* FeedCaseStudyiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A10B16FC28FBB9DE00B27785 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7446A28EDBA3500BC4B61 /* XCTestCase+MemoryLeakTracking.swift */; };
 		A125891228F1CB8F004F2B6B /* LoadFeedFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125891128F1CB8F004F2B6B /* LoadFeedFromCacheUseCaseTests.swift */; };
 		A125891428F1CC46004F2B6B /* FeedStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125891328F1CC46004F2B6B /* FeedStoreSpy.swift */; };
 		A125891728F2B28C004F2B6B /* ValidateFeedCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125891628F2B28C004F2B6B /* ValidateFeedCacheUseCaseTests.swift */; };
@@ -650,6 +651,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A10B16F428FA970800B27785 /* FeedCaseStudyiOSTests.swift in Sources */,
+				A10B16FC28FBB9DE00B27785 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
