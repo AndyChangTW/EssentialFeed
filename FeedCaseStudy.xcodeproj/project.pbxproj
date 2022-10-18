@@ -57,6 +57,7 @@
 		A1F3C82828F7FBA100C765ED /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7446A28EDBA3500BC4B61 /* XCTestCase+MemoryLeakTracking.swift */; };
 		A1F3C82928F7FE3B00C765ED /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125891A28F2B86E004F2B6B /* SharedTestHelpers.swift */; };
 		A1F3C82A28F7FE3F00C765ED /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125891828F2B754004F2B6B /* FeedCacheTestHelpers.swift */; };
+		A1F5E0F728FEEC7D00A2B398 /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F5E0F628FEEC7D00A2B398 /* UIView+Shimmering.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,7 @@
 		A1C7447428EDECB800BC4B61 /* EssentialFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
 		A1F3C81E28F7FA7900C765ED /* EssentialFeedCacheIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedCacheIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F3C82028F7FA7900C765ED /* EssentialFeedCacheIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedCacheIntegrationTests.swift; sourceTree = "<group>"; };
+		A1F5E0F628FEEC7D00A2B398 /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +286,7 @@
 				A10B16E928FA970800B27785 /* FeedCaseStudyiOS.h */,
 				A15E6E3D28FBD187007FE3A5 /* FeedViewController.swift */,
 				A16CCC1428FD2DFB000840E3 /* FeedImageCell.swift */,
+				A1F5E0F628FEEC7D00A2B398 /* UIView+Shimmering.swift */,
 			);
 			path = FeedCaseStudyiOS;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F5E0F728FEEC7D00A2B398 /* UIView+Shimmering.swift in Sources */,
 				A15E6E3E28FBD187007FE3A5 /* FeedViewController.swift in Sources */,
 				A16CCC1528FD2DFB000840E3 /* FeedImageCell.swift in Sources */,
 			);
