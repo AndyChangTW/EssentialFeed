@@ -33,13 +33,13 @@ final class FeedCaseStudyiOSTests: XCTestCase {
         XCTAssertTrue(sut.isShowingLoadingIndicator, "Expected loading indicator once view is loaded")
         
         loader.completeFeedLoading(at: 0)
-        XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once loading is completed")
+        XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once loading completes successfully")
         
         sut.simulateUserInitiatedFeedReload()
         XCTAssertTrue(sut.isShowingLoadingIndicator, "Expected loading indicator once user initiates a reload")
         
-        loader.completeFeedLoading(at: 1)
-        XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once user initiated loading is completed")
+        loader.completeFeedLoadingWithError(at: 1)
+        XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once user initiated loading completes with error")
     }
     
     func test_loadFeedCompletion_rendersSuccessfullyLoadedFeed() {
@@ -61,9 +61,6 @@ final class FeedCaseStudyiOSTests: XCTestCase {
     
     func test_loadFeedCompletion_doesNotAlterCurrentRenderingStateOnError() {
         let image1 = makeFeedImage(description: "a description", location: "a location")
-        let image2 = makeFeedImage(description: nil, location: "a location")
-        let image3 = makeFeedImage(description: "a description", location: nil)
-        let image4 = makeFeedImage(description: nil, location: nil)
         let (sut, loader) = makeSUT()
         
         sut.loadViewIfNeeded()
