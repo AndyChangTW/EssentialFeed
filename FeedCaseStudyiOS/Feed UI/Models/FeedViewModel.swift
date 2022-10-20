@@ -8,29 +8,24 @@
 import Foundation
 import FeedCaseStudy
 
-public final class FeedViewModel {
+final class FeedViewModel {
+    typealias Observer<T> = ((T) -> Void)
     private let feedLoader: FeedLoader
     
-    public init(feedLoader: FeedLoader) {
+    init(feedLoader: FeedLoader) {
         self.feedLoader = feedLoader
     }
     
-    public var isLoading: Bool = false {
-        didSet {
-            onChange?(self)
-        }
-    }
+    var onLoadingStateChange: Observer<Bool>?
+    var onFeedLoaded: Observer<[FeedImage]>?
     
-    public var onChange: ((FeedViewModel) -> Void)?
-    public var onFeedLoaded: (([FeedImage]) -> Void)?
-    
-    public func loadFeed() {
-        isLoading = true
+    func loadFeed() {
+        onLoadingStateChange?(true)
         feedLoader.load { [weak self] result in
             if let feed = try? result.get() {
                 self?.onFeedLoaded?(feed)
             }
-            self?.isLoading = false
+            self?.onLoadingStateChange?(false)
         }
     }
 }
