@@ -323,13 +323,13 @@
 			path = FeedCaseStudyiOSTests;
 			sourceTree = "<group>";
 		};
-		A11046EC290142DF00199C6C /* Models */ = {
+		A11046EC290142DF00199C6C /* Feed Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				A11046ED290142EF00199C6C /* FeedViewModel.swift */,
 				A11045A02901B88300BC0587 /* FeedImageViewModel.swift */,
 			);
-			path = Models;
+			path = "Feed Presentation";
 			sourceTree = "<group>";
 		};
 		A125891528F1CC4B004F2B6B /* Helper */ = {
@@ -403,7 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				A17952AF29003C75004CC237 /* Composer */,
-				A11046EC290142DF00199C6C /* Models */,
+				A11046EC290142DF00199C6C /* Feed Presentation */,
 				A1795299290026FC004CC237 /* Controllers */,
 				A179529A29002709004CC237 /* Views */,
 			);

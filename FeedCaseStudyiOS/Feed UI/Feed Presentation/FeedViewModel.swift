@@ -5,7 +5,6 @@
 //  Created by Andy Chang on 2022/10/20.
 //
 
-import Foundation
 import FeedCaseStudy
 
 final class FeedViewModel {
