@@ -23,27 +23,6 @@ public final class FeedUIComposer {
     }
 }
 
-final class FeedLoaderPresentationAdapter: FeedRefreshViewControllerDelegate {
-    let loader: FeedLoader
-    var presenter: FeedPresenter?
-    
-    init(loader: FeedLoader) {
-        self.loader = loader
-    }
-    
-    func didRequestFeedRefresh() {
-        presenter?.didStartLoading()
-        loader.load { [weak self] result in
-            switch result {
-            case let .success(feed):
-                self?.presenter?.didFinishLoadingFeed(with: feed)
-            case let .failure(error):
-                self?.presenter?.didFinishLoadingFeed(with: error)
-            }
-        }
-    }
-}
-
 final class FeedViewAdapter: FeedView {
     weak var controller: FeedViewController?
     let imageLoader: FeedImageDataLoader
