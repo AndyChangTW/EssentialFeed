@@ -8,7 +8,7 @@
 import Foundation
 import FeedCaseStudy
 
-final class FeedLoaderPresentationAdapter: FeedRefreshViewControllerDelegate {
+final class FeedLoaderPresentationAdapter: FeedViewControllerDelegate {
     let loader: FeedLoader
     var presenter: FeedPresenter?
     
