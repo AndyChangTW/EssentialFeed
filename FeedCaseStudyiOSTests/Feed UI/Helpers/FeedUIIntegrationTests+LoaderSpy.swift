@@ -55,6 +55,4 @@ class LoaderSpy: FeedLoader, FeedImageDataLoader {
         imageRequests.append((url, completion))
         return TaskSpy{ [weak self] in self?.cancelledImageURLs.append(url) }
     }
-    
-    
-    }
+}
