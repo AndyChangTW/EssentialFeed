@@ -58,4 +58,8 @@ extension FeedViewController {
         let index = IndexPath(row: row, section: feedImagesSection)
         ds?.tableView?(tableView, cancelPrefetchingForRowsAt: [index])
     }
+    
+    var errorMessage: String? {
+        return errorView.message
+    }
 }
