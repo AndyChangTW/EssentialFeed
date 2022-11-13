@@ -1,0 +1,9 @@
+/* 
+  Feed.strings
+  FeedCaseStudy
+
+  Created by Andy Chang on 2022/11/13.
+  
+*/
+"FEED_VIEW_TITLE" = "Το Feed μου";
+"FEED_VIEW_CONNECTION_ERROR" = "Δεν ήταν δυνατή η σύνδεση στο διακομιστή";

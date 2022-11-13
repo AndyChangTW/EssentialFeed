@@ -75,6 +75,7 @@
 		A1C7447528EDECB800BC4B61 /* EssentialFeedAPIEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7447428EDECB800BC4B61 /* EssentialFeedAPIEndToEndTests.swift */; };
 		A1C7447628EDECB800BC4B61 /* FeedCaseStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A102818A28E478E700E79279 /* FeedCaseStudy.framework */; };
 		A1D17D11291FCFA7009BA445 /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D17D10291FCFA7009BA445 /* FeedPresenterTests.swift */; };
+		A1D17D142920A439009BA445 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1D17D162920A439009BA445 /* Feed.strings */; };
 		A1E5322628EE6FC300AEB0C3 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C7446A28EDBA3500BC4B61 /* XCTestCase+MemoryLeakTracking.swift */; };
 		A1EEE86E2914E20B008C1AD4 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEE86D2914E20B008C1AD4 /* UITableView+Dequeueing.swift */; };
 		A1EEE8702914E282008C1AD4 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EEE86F2914E282008C1AD4 /* UIImageView+Animations.swift */; };
@@ -210,6 +211,9 @@
 		A1C7447228EDECB800BC4B61 /* EssentialFeedAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C7447428EDECB800BC4B61 /* EssentialFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
 		A1D17D10291FCFA7009BA445 /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
+		A1D17D152920A439009BA445 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
+		A1D17D172920A43D009BA445 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
+		A1D17D182920A43E009BA445 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
 		A1EEE86D2914E20B008C1AD4 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
 		A1EEE86F2914E282008C1AD4 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
 		A1EEE8732914E99C008C1AD4 /* FeedUIIntegrationTests+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedUIIntegrationTests+Localization.swift"; sourceTree = "<group>"; };
@@ -566,6 +570,7 @@
 			isa = PBXGroup;
 			children = (
 				A1D17D10291FCFA7009BA445 /* FeedPresenterTests.swift */,
+				A1D17D162920A439009BA445 /* Feed.strings */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -786,6 +791,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D17D142920A439009BA445 /* Feed.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -968,6 +974,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A1D17D162920A439009BA445 /* Feed.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1D17D152920A439009BA445 /* en */,
+				A1D17D172920A43D009BA445 /* el */,
+				A1D17D182920A43E009BA445 /* pt-BR */,
+			);
+			name = Feed.strings;
+			sourceTree = "<group>";
+		};
 		A1EEE8772914EB02008C1AD4 /* Feed.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
