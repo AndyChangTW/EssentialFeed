@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FeedCaseStudy
 
 final class WeakRefVirtualProxy<T: AnyObject> {
     private weak var object: T?

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FeedCaseStudy
 
 final class FeedViewAdapter: FeedView {
     weak var controller: FeedViewController?
@@ -21,9 +22,9 @@ final class FeedViewAdapter: FeedView {
             let adapter = FeedImageDataLoaderPresentationAdapter<WeakRefVirtualProxy<FeedImageCellController>, UIImage>(model: model, imageLoader: imageLoader)
             let view = FeedImageCellController(delegate: adapter)
             
-            adapter.presenter = FeedImagePresenter(
-                view: WeakRefVirtualProxy(view),
-                imageTransformer: UIImage.init)
+            adapter.presenter = FeedImagePresenter(view: WeakRefVirtualProxy(view), imageTransformer: { data in
+                return UIImage(data: data)
+            })
             
             return view
         }
