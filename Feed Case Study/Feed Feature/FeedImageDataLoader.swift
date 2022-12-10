@@ -1,6 +1,6 @@
 //
 //  FeedImageLoader.swift
-//  FeedCaseStudyiOS
+//  FeedCaseStudy
 //
 //  Created by Andy Chang on 2022/10/19.
 //
