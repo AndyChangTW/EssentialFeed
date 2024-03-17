@@ -23,7 +23,7 @@
 		A125891B28F2B86E004F2B6B /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125891A28F2B86E004F2B6B /* SharedTestHelpers.swift */; };
 		A125891E28F33009004F2B6B /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125891C28F32FAA004F2B6B /* FeedCachePolicy.swift */; };
 		A142B84B2944686C009553BD /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17952A629002B54004CC237 /* FeedImageDataLoader.swift */; };
-		A148E92E2952D8210024DC19 /* RemoteFeedImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148E92D2952D8210024DC19 /* RemoteFeedImageDataLoaderTests.swift */; };
+		A148E92E2952D8210024DC19 /* LoadFeedImageDataFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148E92D2952D8210024DC19 /* LoadFeedImageDataFromRemoteUseCaseTests.swift */; };
 		A15E6E3828FBC4B9007FE3A5 /* FeedCaseStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A102818A28E478E700E79279 /* FeedCaseStudy.framework */; platformFilter = ios; };
 		A15E6E3928FBC4B9007FE3A5 /* FeedCaseStudy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A102818A28E478E700E79279 /* FeedCaseStudy.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A15E6E3E28FBD187007FE3A5 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15E6E3D28FBD187007FE3A5 /* FeedViewController.swift */; };
@@ -166,7 +166,7 @@
 		A125891828F2B754004F2B6B /* FeedCacheTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCacheTestHelpers.swift; sourceTree = "<group>"; };
 		A125891A28F2B86E004F2B6B /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		A125891C28F32FAA004F2B6B /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
-		A148E92D2952D8210024DC19 /* RemoteFeedImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoaderTests.swift; sourceTree = "<group>"; };
+		A148E92D2952D8210024DC19 /* LoadFeedImageDataFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedImageDataFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		A15E6E3D28FBD187007FE3A5 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		A15E926528EB21BB00FC9C48 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		A15E926728EB21E000FC9C48 /* FeedItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemMapper.swift; sourceTree = "<group>"; };
@@ -399,7 +399,7 @@
 				A1F8F1842BA5449500F6FFE2 /* Helpers */,
 				A10281A728E48EC100E79279 /* LoadFeedFromRemoteUseCaseTests.swift */,
 				A1BAC0BD28EC7436006AEB16 /* URLSessionHTTPClientTests.swift */,
-				A148E92D2952D8210024DC19 /* RemoteFeedImageDataLoaderTests.swift */,
+				A148E92D2952D8210024DC19 /* LoadFeedImageDataFromRemoteUseCaseTests.swift */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -884,7 +884,7 @@
 				A1F8F18D2BA6A29400F6FFE2 /* URLProtocolStub.swift in Sources */,
 				A125891728F2B28C004F2B6B /* ValidateFeedCacheUseCaseTests.swift in Sources */,
 				A1D17D11291FCFA7009BA445 /* FeedPresenterTests.swift in Sources */,
-				A148E92E2952D8210024DC19 /* RemoteFeedImageDataLoaderTests.swift in Sources */,
+				A148E92E2952D8210024DC19 /* LoadFeedImageDataFromRemoteUseCaseTests.swift in Sources */,
 				A10281A828E48EC100E79279 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				A18C8ED7292BBD2C001CA294 /* FeedImagePresenterTests.swift in Sources */,
 				A1B63CE928F68A3100DCE3E5 /* XCTestCase+FailableInsertFeedStoreSpecs.swift in Sources */,
