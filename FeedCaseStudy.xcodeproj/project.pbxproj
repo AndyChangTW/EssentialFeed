@@ -93,6 +93,7 @@
 		A1F5E0F728FEEC7D00A2B398 /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F5E0F628FEEC7D00A2B398 /* UIView+Shimmering.swift */; };
 		A1F8F1832BA5449100F6FFE2 /* HTTPClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F8F1822BA5449100F6FFE2 /* HTTPClientSpy.swift */; };
 		A1F8F1872BA545DE00F6FFE2 /* RemoteFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F8F1852BA5458F00F6FFE2 /* RemoteFeedImageDataLoader.swift */; };
+		A1F8F18A2BA6A1DD00F6FFE2 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F8F1882BA6A1A400F6FFE2 /* HTTPURLResponse+StatusCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +231,7 @@
 		A1F5E0F628FEEC7D00A2B398 /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		A1F8F1822BA5449100F6FFE2 /* HTTPClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientSpy.swift; sourceTree = "<group>"; };
 		A1F8F1852BA5458F00F6FFE2 /* RemoteFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoader.swift; sourceTree = "<group>"; };
+		A1F8F1882BA6A1A400F6FFE2 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,6 +348,7 @@
 		A10281AB28E499A600E79279 /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
+				A1F8F18B2BA6A20F00F6FFE2 /* Helpers */,
 				A10281A928E499A300E79279 /* RemoteFeedLoader.swift */,
 				A15E926728EB21E000FC9C48 /* FeedItemMapper.swift */,
 				A17A35FC28F0799000E3483A /* RemoteFeedItem.swift */,
@@ -589,6 +592,14 @@
 			isa = PBXGroup;
 			children = (
 				A1F8F1822BA5449100F6FFE2 /* HTTPClientSpy.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A1F8F18B2BA6A20F00F6FFE2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A1F8F1882BA6A1A400F6FFE2 /* HTTPURLResponse+StatusCode.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -851,6 +862,7 @@
 				A10281A328E479FC00E79279 /* FeedImage.swift in Sources */,
 				A1D17D1B2920A5B0009BA445 /* FeedPresenter.swift in Sources */,
 				A1C7446D28EDE55500BC4B61 /* URLSessionHTTPClient.swift in Sources */,
+				A1F8F18A2BA6A1DD00F6FFE2 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				A1B7816028F7223A0060195B /* ManagedCache.swift in Sources */,
 				A1B63CF128F6B2F100DCE3E5 /* CoreDataFeedStore.swift in Sources */,
 				A1D17D242920A6BD009BA445 /* FeedErrorViewModel.swift in Sources */,
