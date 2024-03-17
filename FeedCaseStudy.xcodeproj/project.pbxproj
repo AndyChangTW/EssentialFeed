@@ -94,6 +94,7 @@
 		A1F8F1832BA5449100F6FFE2 /* HTTPClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F8F1822BA5449100F6FFE2 /* HTTPClientSpy.swift */; };
 		A1F8F1872BA545DE00F6FFE2 /* RemoteFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F8F1852BA5458F00F6FFE2 /* RemoteFeedImageDataLoader.swift */; };
 		A1F8F18A2BA6A1DD00F6FFE2 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F8F1882BA6A1A400F6FFE2 /* HTTPURLResponse+StatusCode.swift */; };
+		A1F8F18D2BA6A29400F6FFE2 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F8F18C2BA6A29400F6FFE2 /* URLProtocolStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,6 +233,7 @@
 		A1F8F1822BA5449100F6FFE2 /* HTTPClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientSpy.swift; sourceTree = "<group>"; };
 		A1F8F1852BA5458F00F6FFE2 /* RemoteFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoader.swift; sourceTree = "<group>"; };
 		A1F8F1882BA6A1A400F6FFE2 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
+		A1F8F18C2BA6A29400F6FFE2 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -592,6 +594,7 @@
 			isa = PBXGroup;
 			children = (
 				A1F8F1822BA5449100F6FFE2 /* HTTPClientSpy.swift */,
+				A1F8F18C2BA6A29400F6FFE2 /* URLProtocolStub.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -878,6 +881,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A125891928F2B754004F2B6B /* FeedCacheTestHelpers.swift in Sources */,
+				A1F8F18D2BA6A29400F6FFE2 /* URLProtocolStub.swift in Sources */,
 				A125891728F2B28C004F2B6B /* ValidateFeedCacheUseCaseTests.swift in Sources */,
 				A1D17D11291FCFA7009BA445 /* FeedPresenterTests.swift in Sources */,
 				A148E92E2952D8210024DC19 /* RemoteFeedImageDataLoaderTests.swift in Sources */,
